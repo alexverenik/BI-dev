@@ -1,0 +1,14 @@
+PS C:\Users\User> mysql_config_editor print --all
+PS C:\Users\User> mysql_config_editor set --login-path=client --host=localhost --user=root --password
+Enter password: ********
+PS C:\Users\User> mysql_config_editor print --all
+[client]
+user = "root"
+password = *****
+host = "localhost"
+PS C:\Users\User> mysql_config_editor print --all
+[client]
+user = "root"
+password = *****
+host = "localhost"
+PS C:\Users\User>
