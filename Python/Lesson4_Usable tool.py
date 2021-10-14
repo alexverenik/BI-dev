@@ -6,12 +6,12 @@
 Во время выполнения расчёта для конкретных значений необходимо запускать скрипт с параметрами."""
 
 
-# from sys import argv
-# from Function_salary import count_salary 
+from sys import argv
+from Function_salary import count_salary 
 
-# file, input_in_hours, rate_of_pay, bonus = argv
+file, input_in_hours, rate_of_pay, bonus = argv
 
-# print(count_salary (int(input_in_hours), int(rate_of_pay), int(bonus)))
+print(count_salary (int(input_in_hours), int(rate_of_pay), int(bonus)))
 
 
 """2. Представлен список чисел. Необходимо вывести элементы исходного списка, значения которых больше предыдущего элемента.
@@ -19,10 +19,10 @@
 Пример исходного списка: [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55].
 Результат: [12, 44, 4, 10, 78, 123]."""
 
-# my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-# print(my_list)
-# new_list = [my_list[el] for el in range (1, len(my_list)) if my_list[el] > my_list[el-1]]
-# print(new_list)
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
+print(my_list)
+new_list = [my_list[el] for el in range (1, len(my_list)) if my_list[el] > my_list[el-1]]
+print(new_list)
 
 
 
@@ -30,8 +30,8 @@
 Решите задание в одну строку.
 Подсказка: используйте функцию range() и генератор."""
 
-# my_list = [el for el in range (20, 240) if el % 20 == 0 or el % 21 == 0]
-# print(my_list)
+my_list = [el for el in range (20, 240) if el % 20 == 0 or el % 21 == 0]
+print(my_list)
 
 
 
@@ -43,11 +43,11 @@
 Результат: [23, 1, 3, 10, 4, 11]"""
 
 
-# my_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-# print(my_list)
+my_list = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+print(my_list)
 
-# new_list = [x for x in my_list if my_list.count(x) == 1]
-# print(new_list)
+new_list = [x for x in my_list if my_list.count(x) == 1]
+print(new_list)
 
 
 
@@ -56,13 +56,13 @@
 Нужно получить результат вычисления произведения всех элементов списка.
 Подсказка: использовать функцию reduce()."""
 
-# from functools import reduce
+from functools import reduce
 
-# my_list = [el for el in range (100, 1001) if el % 2 == 0]
-# print(my_list)
+my_list = [el for el in range (100, 1001) if el % 2 == 0]
+print(my_list)
 
-# multiplying = reduce((lambda x, y: x * y), my_list)
-# print(multiplying)
+multiplying = reduce((lambda x, y: x * y), my_list)
+print(multiplying)
 
 
 
@@ -74,13 +74,13 @@
 Например, в первом задании выводим целые числа, начиная с 3. При достижении числа 10 — завершаем цикл. 
 Вторым пунктом необходимо предусмотреть условие, при котором повторение элементов списка прекратится."""
 
-# from itertools import count
+from itertools import count
 
-# for el in count(3):
-#     if el > 10:
-#         break
-#     else:
-#         print(el)
+for el in count(3):
+    if el > 10:
+        break
+    else:
+        print(el)
 
 
 
@@ -89,20 +89,20 @@
 Она отвечает за получение факториала числа. В цикле нужно выводить только первые n чисел, начиная с 1! и до n!.
 Подсказка: факториал числа n — произведение чисел от 1 до n. Например, факториал четырёх 4! = 1 * 2 * 3 * 4 = 24."""
 
-# n = int(input("Enter n: "))
+n = int(input("Enter n: "))
 
 
-# def fact(n):
-#     f = 1
-#     for i in range(1, n+1):
-#         f = f * i
-#         yield f
+def fact(n):
+    f = 1
+    for i in range(1, n+1):
+        f = f * i
+        yield f
 
 
-# g = fact(n)
-# print(g)
-# for el in g:
-#     print(el)
+g = fact(n)
+print(g)
+for el in g:
+    print(el)
 
 
 
