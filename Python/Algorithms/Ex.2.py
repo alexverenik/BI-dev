@@ -13,51 +13,51 @@ Created on Thu Nov  4 16:01:08 2021
 # и снова запрашивать знак операции.
 # Также сообщать пользователю о невозможности деления на ноль, если он ввел 0 в качестве делителя.
 
-# equation = input('Введите пример или 0 для выхода:\n')
-# while equation != '0':
-#     eq = list(equation.split())
-#     a = float(eq[0])
-#     b = float(eq[2])
-#     answer = "нет решения"
-#     if eq[1] == '+':
-#         answer = a + b
-#     elif eq[1] == '-':
-#         answer = a - b
-#     elif eq[1] == '*':
-#         answer = a * b
-#     elif eq[1] == '/':
-#         if b != 0:
-#             answer = a / b
-#         else:
-#             print('На ноль делить нельзя')
-#     else:
-#         print('Неверный формат ввода')
-#     print(f'{equation} = {answer}')
-#     equation = input('Введите пример или 0 для выхода:\n')
-# print('До свидания')
+equation = input('Введите пример или 0 для выхода:\n')
+while equation != '0':
+    eq = list(equation.split())
+    a = float(eq[0])
+    b = float(eq[2])
+    answer = "нет решения"
+    if eq[1] == '+':
+        answer = a + b
+    elif eq[1] == '-':
+        answer = a - b
+    elif eq[1] == '*':
+        answer = a * b
+    elif eq[1] == '/':
+        if b != 0:
+            answer = a / b
+        else:
+            print('На ноль делить нельзя')
+    else:
+        print('Неверный формат ввода')
+    print(f'{equation} = {answer}')
+    equation = input('Введите пример или 0 для выхода:\n')
+print('До свидания')
 
 
 # 2. Посчитать четные и нечетные цифры введенного натурального числа.
 
-# number = input('Введите целое число: ')
-# odd = 0
-# even = 0
-# for num in number:
-#     if int(num) % 2 == 0:
-#         even += 1
-#     else:
-#         odd += 1
-# print(f'В числе {number}: {odd} нечетных и {even} четных цифр')
+number = input('Введите целое число: ')
+odd = 0
+even = 0
+for num in number:
+    if int(num) % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+print(f'В числе {number}: {odd} нечетных и {even} четных цифр')
 
 
-# 4. Найти сумму n элементов следующего ряда чисел: 1, -0.5, 0.25, -0.125, ...
-# Количество элементов (n) вводится с клавиатуры.
+4. Найти сумму n элементов следующего ряда чисел: 1, -0.5, 0.25, -0.125, ...
+Количество элементов (n) вводится с клавиатуры.
 
-# length = int(input('Введите длину последовательности: '))
-# summa = 0
-# for i in range(length):
-#     summa += 1 / (-2) ** i
-# print(f'Сумма последовательности = {summa}')
+length = int(input('Введите длину последовательности: '))
+summa = 0
+for i in range(length):
+    summa += 1 / (-2) ** i
+print(f'Сумма последовательности = {summa}')
 
 
 # В программе генерируется случайное целое число от 0 до 100.
@@ -65,33 +65,22 @@ Created on Thu Nov  4 16:01:08 2021
 # После каждой неудачной попытки должно сообщаться, больше или меньше загаданного введенное пользователем число.
 # Если за 10 попыток число не отгадано, то вывести его.
 
-# import random
+import random
 
-# 6. number = random.randint(0, 101)
-# for i in range(10):
-#     num = int(input('Угадайте целое число от 0 до 100: '))
-#     if num == number:
-#         print('Поздравляем, вы угадали!')
-#         break
-#     elif num < number:
-#         print('Ваше число меньше загаданного')
-#     else:
-#         print('Ваше число больше загаданного')
-# print(f'Было загадано число {number}')
+number = random.randint(0, 101)
+for i in range(10):
+    num = int(input('Угадайте целое число от 0 до 100: '))
+    if num == number:
+        print('Поздравляем, вы угадали!')
+        break
+    elif num < number:
+        print('Ваше число меньше загаданного')
+    else:
+        print('Ваше число больше загаданного')
+print(f'Было загадано число {number}')
 
 
 
-# 7. Посчитать, сколько раз встречается определенная цифра в введенной последовательности чисел.
-# Количество вводимых чисел и цифра, которую необходимо посчитать, задаются вводом с клавиатуры.
-print('Введите длину последовательности и число, которое хотите подсчитать: ')
-length = int(input('length = '))
-num = float(input('num = '))
-count = 0
-for i in range(length):
-    n = float(input(f'Введите {i+1}-е число: '))
-    if n == num:
-        count += 1
-print(f'Число {num} встречается в последовательности {count} раз')
 
 
 
